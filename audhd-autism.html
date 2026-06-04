@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autism Dominant — Lester's ADHD Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0a0f; --surface:#111118; --border:#151f2d; --text:#e8e4dc; --muted:#a8a4b8; --dim:#6b6580; --primary:#4a8fe8; --glow:rgba(74,143,232,0.1); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'Cormorant Garamond',serif; }
+  body::after { content:''; position:fixed; inset:0; background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px); pointer-events:none; z-index:999; }
+  .container { max-width:700px; margin:0 auto; padding:60px 24px 100px; }
+  .back { display:inline-flex; align-items:center; gap:8px; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.15em; color:var(--dim); text-decoration:none; margin-bottom:48px; transition:color 0.2s; }
+  .back:hover { color:var(--muted); }
+  .sys-tag { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--primary); margin-bottom:20px; }
+  .sys-tag::before { content:'▶ '; }
+  .hero-title { font-size:clamp(48px,10vw,76px); font-weight:300; line-height:0.95; color:var(--primary); font-style:italic; margin-bottom:8px; }
+  .score-label { font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin:16px 0 32px; letter-spacing:0.1em; }
+  .divider { height:1px; background:var(--border); margin-bottom:32px; }
+  .intro { font-size:18px; line-height:1.8; color:var(--muted); margin-bottom:48px; border-left:2px solid var(--primary); padding-left:20px; }
+  .section { margin-bottom:48px; }
+  .section-heading { font-size:22px; font-weight:600; color:var(--text); margin-bottom:16px; }
+  .section-body { font-size:17px; line-height:1.85; color:var(--muted); white-space:pre-line; }
+  .tips-section { margin:48px 0; }
+  .tips-label { font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:var(--muted); margin-bottom:24px; text-transform:uppercase; }
+  .tip { margin-bottom:28px; padding:22px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--primary); }
+  .tip-title { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--primary); margin-bottom:12px; }
+  .tip-practical { font-size:16px; line-height:1.75; color:var(--muted); margin-bottom:14px; }
+  .tip-reframe { font-size:16px; line-height:1.75; color:#c8a84b; font-style:italic; padding-top:14px; border-top:1px solid var(--border); }
+  .tip-reframe::before { content:'// REFRAME'; font-style:normal; font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.15em; color:#c8a84b; display:block; margin-bottom:8px; }
+  .cta-block { margin-top:56px; padding:32px 28px; border:1px solid var(--primary); background:var(--surface); position:relative; overflow:hidden; }
+  .cta-block::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--primary); }
+  .cta-label { font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.25em; color:var(--muted); margin-bottom:14px; text-transform:uppercase; }
+  .cta-heading { font-size:24px; font-weight:600; color:var(--text); margin-bottom:12px; line-height:1.3; }
+  .cta-body { font-size:16px; line-height:1.75; color:var(--muted); margin-bottom:24px; }
+  .cta-btn { display:inline-flex; align-items:center; gap:10px; background:transparent; border:1px solid var(--primary); padding:14px 28px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; cursor:pointer; transition:all 0.25s; text-decoration:none; color:var(--primary); }
+  .cta-btn:hover { background:var(--glow); color:var(--text); }
+  .footer { margin-top:64px; padding-top:28px; border-top:1px solid var(--border); font-family:'Space Mono',monospace; font-size:10px; color:var(--dim); }
+  .footer a { color:var(--dim); text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="back" href="audhd-mirror.html">← BACK TO SCAN</a>
+  <div class="sys-tag">LESTER ADHD LABS // AUDHD MIRROR RESULT</div>
+  <h1 class="hero-title">Autism Dominant</h1>
+  <div class="score-label">// Primary system: autistic architecture.</div>
+  <div class="divider"></div>
+  <p class="intro">Your autistic traits came through clearly as your dominant pattern. This page goes deeper into what autistic experience actually is — not the clinical checklist version, but the lived reality of processing the world with a different architecture than most people around you.</p>
+  
+  <div class="section">
+    <h2 class="section-heading">What autism actually is — underneath the deficit model</h2>
+    <p class="section-body">Autism has historically been described almost entirely in terms of what autistic people lack — social skills, flexibility, theory of mind. That framework is not only inaccurate but actively harmful, because it starts from a neurotypical baseline and measures autistic experience as deviation from it.
+
+A more accurate frame: autism is a different neurological processing style. Autistic brains take in more sensory information, process it more deeply, form stronger pattern recognition over time, and operate with greater internal consistency and integrity than the neurotypical average. The social difficulties most people associate with autism aren't because autistic people don't want connection or can't form it — it's because the unwritten social rules that neurotypical people absorb automatically require conscious processing for autistic brains.
+
+You're not running a deficient social programme. You're running a different one — one that requires explicit information that the other programme takes for granted.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">Autistic burnout — what it actually is and why it happens</h2>
+    <p class="section-body">Autistic burnout is not the same as regular burnout or depression, though it can look similar. It's the result of sustained overload — of masking too long, processing too much, operating in environments that require constant adaptation without adequate recovery time.
+
+It typically manifests as a significant and sudden reduction in capacity — loss of skills that were previously automatic, extreme fatigue, sensory sensitivity that's much higher than usual, loss of language or communication ability, complete inability to mask, withdrawal.
+
+The critical thing to understand about autistic burnout is that pushing through it makes it worse and longer. It's not a mindset issue. It's a depleted nervous system that requires actual reduction of demand — not more effort, more accommodation, more output. Recovery from autistic burnout is measured in weeks and months, not days. Understanding this prevents the cycle of burnout, recovery attempt, re-burnout that many autistic people spend years trapped in.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">The depth you carry that nobody else can see</h2>
+    <p class="section-body">Autistic people tend to have a rich, detailed, intense inner world that is largely invisible to the people around them. Deep interests that go far beyond casual engagement. Pattern recognition that picks up things others completely miss. An internal ethical and logical consistency that makes compromise feel genuinely difficult — not because you're rigid, but because you actually mean what you think.
+
+Most autistic people spend a significant portion of their energy translating this inner world into a form the external world can process — simplifying, softening, code-switching, performing interest in things that feel meaningless while containing genuine passion about things nobody around them shares.
+
+The loss isn't just energy. It's the gradual distancing from your own depth — the slow dimming of the things that make you most distinctly yourself, in the service of being acceptable to environments that were never designed to hold what you actually are.</p>
+  </div>
+  <div class="tips-section">
+    <div class="tips-label">// PRACTICAL TOOLS + PERSPECTIVE SHIFTS</div>
+    
+    <div class="tip">
+      <div class="tip-title">TIP 1 — REDUCE DAILY PROCESSING LOAD INTENTIONALLY</div>
+      <div class="tip-practical">Every unpredictable event, every ambiguous social situation, every sensory irritant, every unnecessary decision is a processing cost. Reduce the decisions that don't matter — same breakfast, same route, same morning routine. Control your sensory environment wherever you have the ability to. Build predictability into the parts of your day you can control so that your processing resources are available for the parts you can't.</div>
+      <div class="tip-reframe">This isn't rigidity. It's resource management. A brain that processes more deeply than average has higher operating costs than average. Managing those costs isn't a sign of limitation — it's appropriate maintenance for the system you're running. The people around you who don't need this level of management are running a cheaper system.</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">TIP 2 — LET YOUR DEEP INTERESTS DO REAL WORK FOR YOU</div>
+      <div class="tip-practical">Stop treating your deep interests as things to manage around — the obsessions that take too much space, the topics that are too niche to share, the passions that make you 'too much.' Start asking how to build your life so those interests are central rather than marginal. Career direction, community, creative output, expertise — deep interests are access points to all of it.</div>
+      <div class="tip-reframe">Neurotypical people are casually interested in many things and deeply interested in very few. Autistic people are deeply interested in specific things and those interests are often the truest expression of who they are. The world is full of people who are competent at many things and masterful at none. Deep interest, taken seriously, produces mastery. That's not a niche trait. That's an extraordinary one.</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">TIP 3 — RECOGNISE AUTISTIC BURNOUT BEFORE IT PEAKS</div>
+      <div class="tip-practical">Learn your early warning signs — the specific things that indicate your system is approaching overload before it gets there. For most autistic people these include increased sensory sensitivity, decreased tolerance for social demand, irritability that feels out of proportion, loss of interest in things that usually engage you. When you notice these: reduce, don't push.</div>
+      <div class="tip-reframe">Burnout prevention is not weakness or avoidance. It's the intelligent maintenance of a high-capacity system. Pushing through early warning signs doesn't demonstrate resilience — it delays the burnout while guaranteeing it will be deeper when it arrives. The same effort applied to early reduction produces dramatically better outcomes than the same effort applied to recovery after collapse.</div>
+    </div>
+  </div>
+  <div class="cta-block">
+    <div class="cta-label">// WHAT'S NEXT</div>
+    <div class="cta-heading">The Lab holds the depth you bring.</div>
+    <p class="cta-body">Not as something to manage. As something to work with. A community of neurodivergent people who understand what it costs to carry this much and are building lives that are actually designed for their real architecture. Come in.</p>
+    <a href="https://www.facebook.com/groups/1272824268295641" class="cta-btn" target="_blank">JOIN LESTER'S ADHD LAB ON FACEBOOK →</a>
+  </div>
+  <div class="footer">
+    // LESTER ADHD &nbsp;·&nbsp; <a href="audhd-mirror.html">RETAKE THE SCAN</a>
+  </div>
+</div>
+</body>
+</html>
