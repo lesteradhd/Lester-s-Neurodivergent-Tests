@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Low Traits — Lester's ADHD Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>  :root { --ink:#1a1520; --paper:#f5f0e8; --cream:#ede8dc; --gold:#c8a84b; --rust:#b04a2e; --deep:#1a1018; --muted:#3d3545; --primary:#888888; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; line-height:1.75; }
+  body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.4; }
+  .container { max-width:700px; margin:0 auto; padding:60px 24px 100px; }
+  .back { display:inline-flex; align-items:center; gap:8px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; margin-bottom:48px; transition:color 0.2s; font-weight:600; }
+  .back:hover { color:var(--ink); }
+  .sys-tag { font-size:13px; letter-spacing:0.15em; text-transform:uppercase; color:var(--primary); margin-bottom:20px; font-weight:700; }
+  .hero-title { font-family:'Playfair Display',serif; font-size:clamp(52px,10vw,82px); font-weight:900; line-height:0.95; color:var(--primary); margin-bottom:8px; }
+  .score-label { font-size:16px; color:var(--muted); margin:16px 0 32px; font-weight:600; }
+  .divider { height:2px; background:var(--gold); width:60px; margin-bottom:36px; }
+  .intro { font-size:20px; line-height:1.9; color:var(--ink); margin-bottom:52px; border-left:4px solid var(--primary); padding-left:22px; font-weight:400; }
+  .section { margin-bottom:52px; }
+  .section-heading { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--deep); margin-bottom:16px; line-height:1.2; }
+  .section-body { font-size:19px; line-height:1.95; color:var(--ink); white-space:pre-line; font-weight:400; }
+  .tips-header { margin:64px 0 8px; }
+  .tips-label { font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:700; }
+  .tips-intro { font-size:19px; line-height:1.85; color:var(--ink); margin-bottom:32px; font-weight:400; }
+  .tips-intro strong { color:var(--rust); font-weight:700; }
+  .tip { margin-bottom:28px; padding:28px; background:white; border-left:4px solid var(--primary); box-shadow:0 2px 12px rgba(0,0,0,0.06); }
+  .tip-number { font-size:12px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; font-weight:700; }
+  .tip-title { font-weight:700; font-size:20px; color:var(--deep); margin-bottom:14px; line-height:1.3; }
+  .tip-practical { font-size:18px; line-height:1.85; color:var(--ink); margin-bottom:16px; font-weight:400; }
+  .tip-reframe-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--rust); font-weight:700; margin-bottom:8px; display:block; }
+  .tip-reframe { font-size:18px; line-height:1.85; color:var(--rust); font-style:italic; padding-top:16px; border-top:1px solid var(--cream); font-weight:400; }
+  .cta-wrapper { margin-top:80px; padding:48px 36px; border:2px solid var(--primary); background:white; position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
+  .cta-big-label { font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; font-weight:700; }
+  .cta-big-heading { font-family:'Playfair Display',serif; font-size:clamp(34px,6vw,54px); font-weight:900; line-height:1.05; color:var(--deep); margin-bottom:20px; }
+  .cta-big-heading strong { color:var(--primary); }
+  .cta-big-heading em { font-style:italic; color:var(--rust); }
+  .cta-big-body { font-size:19px; line-height:1.9; color:var(--ink); margin-bottom:36px; max-width:560px; font-weight:400; }
+  .cta-btn-big { display:inline-flex; align-items:center; gap:14px; background:var(--rust); color:white; border:none; padding:22px 44px; font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; cursor:pointer; transition:all 0.25s; text-decoration:none; }
+  .cta-btn-big:hover { background:var(--deep); transform:translateX(6px); }
+  .cta-sub { font-size:14px; color:var(--muted); margin-top:14px; font-weight:500; }
+  .footer { margin-top:64px; padding-top:28px; border-top:1px solid var(--cream); font-size:14px; color:var(--muted); font-weight:500; }
+  .footer a { color:var(--muted); text-decoration:underline; }</style>
+</head>
+<body>
+<div class="container">
+  <a class="back" href="neurodivergent-system-scan.html">← Back to the quiz</a>
+  <div class="sys-tag">LESTER ADHD LABS // AUDHD MIRROR — LOW TRAIT PROFILE</div>
+  <h1 class="hero-title">Low Traits</h1>
+  <div class="score-label">// The scan came back quiet.</div>
+  <div class="divider"></div>
+  <p class="intro">Your scores didn't show strong ADHD or autistic patterns. That might mean several things — and this page explores them honestly, along with what understanding neurodivergence actually gives you whether or not it's your own wiring.</p>
+  
+  <div class="section">
+    <h2 class="section-heading">What a low traits result actually means</h2>
+    <p class="section-body">A low score can mean a few different things. The most straightforward: the ADHD and autistic traits this assessment measures aren't your dominant wiring.
+
+But there are other possibilities. Heavy masking — particularly in people who have been undiagnosed for a long time — can suppress scores because a deep masker's automatic response is the performed version, not the real one. If you've been masking long enough, you might score lower than your actual neurology.
+
+Third possibility: you're here because someone in your life is neurodivergent, not you. That's the most common reason people with low trait scores end up in these spaces — and it's just as valid a reason to be here.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">What neurotypical people miss about neurodivergent experience</h2>
+    <p class="section-body">Most neurotypical people who care about neurodivergent people in their lives try to understand through the clinical lens — diagnosis criteria, accommodations lists, symptom management strategies. That information is useful but incomplete because it describes the outside of the experience without the inside.
+
+The inside is: the specific exhaustion of a brain that processes differently in a world that wasn't designed for it. The shame that accumulates from years of being told you're too much or not enough. The gap between how you appear to the world and how you actually feel. That inside view is what changes how you show up for the neurodivergent people in your life.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">The asymmetry nobody talks about</h2>
+    <p class="section-body">Neurodivergent and neurotypical people are not in opposition — but there is a real asymmetry in how much each group is required to adapt to the other. Neurodivergent people spend enormous energy learning to navigate neurotypical environments, norms, and communication styles. The reverse rarely happens at the same scale.
+
+When a neurotypical person genuinely learns to see those norms as norms — rather than universal standards — and adjusts their approach accordingly, the quality of their relationships with neurodivergent people changes dramatically.</p>
+  </div>
+  <div class="tips-header">
+    <div class="tips-label">Practical Tools + Perspective Shifts</div>
+    <p class="tips-intro">Whether you're neurodivergent yourself or supporting someone who is — understanding the real experience (not the clinical summary) is what changes everything. <strong>Tools help. Perspective changes the relationship.</strong></p>
+  </div>
+  
+  <div class="tip">
+    <div class="tip-number">Tip 1</div>
+    <div class="tip-title">Stop applying neurotypical logic to neurodivergent behaviour</div>
+    <div class="tip-practical">When a neurodivergent person in your life does something that seems irrational — ask 'what might be happening in their nervous system right now' before asking 'why are they doing this to me.'</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">Neurodivergent behaviour almost always has a neurological logic. It's just not the same logic neurotypical brains use. When you access that logic — even partially — behaviour that looked unreasonable starts to look like a coherent response to a different internal experience.</div>
+  </div>
+  <div class="tip">
+    <div class="tip-number">Tip 2</div>
+    <div class="tip-title">Learn to read dysregulation before it peaks</div>
+    <div class="tip-practical">Neurodivergent people often can't access words for what they're experiencing while they're experiencing it. Learn the specific early signs for the person in your life. When you see them — offer space, not questions.</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">The moment of peak dysregulation is the worst possible time for a productive conversation. It's also the moment most people try to have one. Timing is more than half the intervention.</div>
+  </div>
+  <div class="tip">
+    <div class="tip-number">Tip 3</div>
+    <div class="tip-title">Ask what helps — then believe the answer</div>
+    <div class="tip-practical">Most neurodivergent people have been told their whole lives that what they say they need isn't really what they need. Ask what actually helps — and then do that thing, even if it doesn't make sense to you.</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">Support that doesn't match what the person says they need isn't really support — it's support designed for a different person. Presence and genuine belief in what someone tells you about their own experience is usually the most powerful thing you can offer.</div>
+  </div>
+  <div class="cta-wrapper">
+    <div class="cta-big-label">What's Next</div>
+    <h2 class="cta-big-heading">Understanding this changes <strong>how you show up.</strong></h2>
+    <p class="cta-big-body">Whether you're neurodivergent yourself or someone who loves a person who is — the Lab is where the real conversation happens. Not the clinical version. The lived one. Come in.</p>
+    <a href="https://www.facebook.com/groups/1272824268295641" class="cta-btn-big" target="_blank">JOIN LESTER'S ADHD LAB ON FACEBOOK →</a>
+    <p class="cta-sub">Join free · Lester's ADHD Lab on Facebook</p>
+  </div>
+  <div class="footer">
+    — Lester &nbsp;·&nbsp; <a href="neurodivergent-system-scan.html">Retake the quiz</a>
+  </div>
+</div>
+</body>
+</html>

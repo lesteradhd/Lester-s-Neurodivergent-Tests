@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuDHD — Lester's ADHD Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>  :root { --ink:#1a1520; --paper:#f5f0e8; --cream:#ede8dc; --gold:#c8a84b; --rust:#b04a2e; --deep:#1a1018; --muted:#3d3545; --primary:#a855f7; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; line-height:1.75; }
+  body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.4; }
+  .container { max-width:700px; margin:0 auto; padding:60px 24px 100px; }
+  .back { display:inline-flex; align-items:center; gap:8px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; margin-bottom:48px; transition:color 0.2s; font-weight:600; }
+  .back:hover { color:var(--ink); }
+  .sys-tag { font-size:13px; letter-spacing:0.15em; text-transform:uppercase; color:var(--primary); margin-bottom:20px; font-weight:700; }
+  .hero-title { font-family:'Playfair Display',serif; font-size:clamp(52px,10vw,82px); font-weight:900; line-height:0.95; color:var(--primary); margin-bottom:8px; }
+  .score-label { font-size:16px; color:var(--muted); margin:16px 0 32px; font-weight:600; }
+  .divider { height:2px; background:var(--gold); width:60px; margin-bottom:36px; }
+  .intro { font-size:20px; line-height:1.9; color:var(--ink); margin-bottom:52px; border-left:4px solid var(--primary); padding-left:22px; font-weight:400; }
+  .section { margin-bottom:52px; }
+  .section-heading { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--deep); margin-bottom:16px; line-height:1.2; }
+  .section-body { font-size:19px; line-height:1.95; color:var(--ink); white-space:pre-line; font-weight:400; }
+  .tips-header { margin:64px 0 8px; }
+  .tips-label { font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:700; }
+  .tips-intro { font-size:19px; line-height:1.85; color:var(--ink); margin-bottom:32px; font-weight:400; }
+  .tips-intro strong { color:var(--rust); font-weight:700; }
+  .tip { margin-bottom:28px; padding:28px; background:white; border-left:4px solid var(--primary); box-shadow:0 2px 12px rgba(0,0,0,0.06); }
+  .tip-number { font-size:12px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; font-weight:700; }
+  .tip-title { font-weight:700; font-size:20px; color:var(--deep); margin-bottom:14px; line-height:1.3; }
+  .tip-practical { font-size:18px; line-height:1.85; color:var(--ink); margin-bottom:16px; font-weight:400; }
+  .tip-reframe-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--rust); font-weight:700; margin-bottom:8px; display:block; }
+  .tip-reframe { font-size:18px; line-height:1.85; color:var(--rust); font-style:italic; padding-top:16px; border-top:1px solid var(--cream); font-weight:400; }
+  .cta-wrapper { margin-top:80px; padding:48px 36px; border:2px solid var(--primary); background:white; position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
+  .cta-big-label { font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; font-weight:700; }
+  .cta-big-heading { font-family:'Playfair Display',serif; font-size:clamp(34px,6vw,54px); font-weight:900; line-height:1.05; color:var(--deep); margin-bottom:20px; }
+  .cta-big-heading strong { color:var(--primary); }
+  .cta-big-heading em { font-style:italic; color:var(--rust); }
+  .cta-big-body { font-size:19px; line-height:1.9; color:var(--ink); margin-bottom:36px; max-width:560px; font-weight:400; }
+  .cta-btn-big { display:inline-flex; align-items:center; gap:14px; background:var(--rust); color:white; border:none; padding:22px 44px; font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; cursor:pointer; transition:all 0.25s; text-decoration:none; }
+  .cta-btn-big:hover { background:var(--deep); transform:translateX(6px); }
+  .cta-sub { font-size:14px; color:var(--muted); margin-top:14px; font-weight:500; }
+  .footer { margin-top:64px; padding-top:28px; border-top:1px solid var(--cream); font-size:14px; color:var(--muted); font-weight:500; }
+  .footer a { color:var(--muted); text-decoration:underline; }</style>
+</head>
+<body>
+<div class="container">
+  <a class="back" href="neurodivergent-system-scan.html">← Back to the quiz</a>
+  <div class="sys-tag">LESTER ADHD LABS // AUDHD MIRROR — BOTH SYSTEMS ACTIVE</div>
+  <h1 class="hero-title">AuDHD</h1>
+  <div class="score-label">// Both systems running simultaneously.</div>
+  <div class="divider"></div>
+  <p class="intro">You scored high on both ADHD and autistic traits. That means you're not dealing with one neurological system — you're running two contradictory ones simultaneously, every single day. This page goes deeper into what that actually means and what genuinely helps.</p>
+  
+  <div class="section">
+    <h2 class="section-heading">Why AuDHD is a third thing, not just two things</h2>
+    <p class="section-body">Most people think AuDHD means having ADHD and autism side by side. That's not quite right. What actually happens is that the two systems interact, mask each other, and produce a third experience that's distinct from either one alone.
+
+The ADHD brain craves novelty, impulsivity, and constant stimulation. The autistic brain needs predictability, deep processing, and controlled input. They don't just coexist — they actively contradict each other. You're both and neither — and that specific experience needs its own language.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">The masking AuDHD produces</h2>
+    <p class="section-body">AuDHD people often develop extremely sophisticated masking because the two conditions mask each other in clinical settings — meaning you can look 'not ADHD enough' and 'not autistic enough' simultaneously.
+
+What this produces is a person who is very good at appearing functional while running an enormous internal load. The autistic side builds detailed social scripts. The ADHD side uses charm and humour to cover the rest. Together they produce someone who can navigate most rooms while using far more cognitive resource than anyone around them realises.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">What AuDHD burnout looks like</h2>
+    <p class="section-body">AuDHD burnout can look like complete shutdown — flat affect, inability to initiate, nothing registering. Or it can look like explosion — emotional volatility, impulsive decisions, complete inability to manage sensory input.
+
+What makes it hard to recognise is that the two sides can take turns. You might have a shutdown period followed by a high-energy period — not because things are better but because a different system is now in the foreground. This cycling is often misread as mood disorder.</p>
+  </div>
+  <div class="caveat">
+    <div class="caveat-label">Important Note</div>
+    <h2 class="caveat-heading">An important caveat — AuDHD and CPTSD</h2>
+    <p class="caveat-body">This is worth saying clearly: AuDHD has significant overlap with Complex PTSD (CPTSD), and the relationship between them is genuinely complicated and still debated in the clinical and neurodivergent communities.
+
+Here's why it matters. Growing up AuDHD — especially undiagnosed — almost always involves repeated experiences of being too much, too different, constantly misunderstood, and unable to meet the expectations of environments that weren't built for you. That experience, sustained over years, produces trauma. Real, nervous system-level trauma. Which means that many of the patterns associated with AuDHD — hypervigilance, emotional dysregulation, identity confusion, shutdown responses, difficulty trusting — also look exactly like CPTSD symptoms.
+
+The honest truth that the research hasn't settled: it's not always clear which came first or how much of what you experience is neurology versus the accumulated impact of living in a world that didn't accommodate your neurology. Some researchers argue that for many people, the CPTSD is primary and was caused by the experience of being AuDHD in an unaccommodating world. Others argue the neurological wiring is primary and the trauma patterns are a downstream consequence.
+
+For you, practically, this means two things. First — if your result resonates, consider whether working with a trauma-informed therapist who understands neurodivergence might be as valuable as (or more valuable than) strategies aimed purely at the neurodivergent wiring. Second — both can be true at the same time. You can be genuinely AuDHD and genuinely carrying real trauma from the experience of it. One doesn't cancel the other out.</p>
+  </div>
+  <div class="tips-header">
+    <div class="tips-label">Practical Tools + Perspective Shifts</div>
+    <p class="tips-intro">Coping tools are useful — and you can Google hundreds of them. But tools only work when the person using them understands their actual wiring. <strong>A full perspective change is what changes everything.</strong> Here's what that looks like for AuDHD specifically:</p>
+  </div>
+  
+  <div class="tip">
+    <div class="tip-number">Tip 1</div>
+    <div class="tip-title">Build flexible structure — not rigid, not chaotic</div>
+    <div class="tip-practical">Rigid schedules dysregulate the ADHD side through boredom and constraint. No structure dysregulates the autistic side through unpredictability. The solution: fixed anchors with flexible middles. Same wake time, same morning sequence, same wind-down — but open space in between.</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">You are not inconsistent. You are a system that requires a very specific environment to function — one that most productivity advice doesn't account for because it was designed for single-system brains. Stop applying standard templates and start designing for your actual architecture.</div>
+  </div>
+  <div class="tip">
+    <div class="tip-number">Tip 2</div>
+    <div class="tip-title">Name which system is activated right now</div>
+    <div class="tip-practical">When you're overwhelmed, ask: is this ADHD overwhelm (under-stimulated, restless, brain spinning — needs movement and novelty) or autistic overwhelm (over-stimulated, too much input — needs silence and withdrawal)? They need opposite responses.</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">Your overwhelm isn't random. It has a source and a logic. When you can identify which system is in distress you stop responding to both the same way — and start giving each system what it actually needs.</div>
+  </div>
+  <div class="tip">
+    <div class="tip-number">Tip 3</div>
+    <div class="tip-title">Measure sustainability, not consistency</div>
+    <div class="tip-practical">Stop tracking whether you were consistent today. Start tracking whether today was sustainable — whether you ended it with enough capacity to function tomorrow. That's the real metric for AuDHD brains.</div>
+    <span class="tip-reframe-label">The Reframe</span>
+    <div class="tip-reframe">Consistency was never your goal. It was an external standard absorbed from a world that assumed everyone's baseline was the same. Your baseline isn't the same. Measuring yourself against it is like measuring a fish by how well it climbs trees.</div>
+  </div>
+  <div class="cta-wrapper">
+    <div class="cta-big-label">What's Next</div>
+    <h2 class="cta-big-heading">You've been caught between <strong>two worlds</strong> your whole life.</h2>
+    <p class="cta-big-body">AuDHD isn't two conditions sitting neatly beside each other — it's a third thing entirely. The Lab is where we talk about that third thing. Not ADHD tips. Not autism tips. The specific, contradictory, exhausting, and extraordinary experience of running both at once.</p>
+    <a href="https://www.facebook.com/groups/1272824268295641" class="cta-btn-big" target="_blank">JOIN LESTER'S ADHD LAB ON FACEBOOK →</a>
+    <p class="cta-sub">Join free · Lester's ADHD Lab on Facebook</p>
+  </div>
+  <div class="footer">
+    — Lester &nbsp;·&nbsp; <a href="neurodivergent-system-scan.html">Retake the quiz</a>
+  </div>
+</div>
+</body>
+</html>
